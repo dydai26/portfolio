@@ -1,0 +1,106 @@
+@keyframes float {
+    0% { transform: translateY(0px) rotateY(0deg); }
+    50% { transform: translateY(-20px) rotateY(10deg); }
+    100% { transform: translateY(0px) rotateY(0deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff; }
+    100% { text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff; }
+}
+
+@keyframes borderPulse {
+    0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff; }
+    100% { box-shadow: 0 0 2px #0ff, 0 0 5px #0ff, 0 0 10px #0ff; }
+}
+
+@keyframes badgeDrop {
+    0% { transform: translateY(-200%) rotate(-5deg); }
+    60% { transform: translateY(20%) rotate(5deg); }
+    80% { transform: translateY(-10%) rotate(-2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes badgeSwing {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-badge-drop {
+    animation: badgeDrop 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-badge-swing {
+    animation: badgeSwing 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+.neon-text {
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+    color: #fff;
+}
+
+.neon-border {
+    animation: borderPulse 1.5s ease-in-out infinite alternate;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.perspective-container {
+    perspective: 1000px;
+}
+
+.transform-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.transform-3d:hover {
+    transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
+}
+
+.badge-string {
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(180deg, transparent, rgba(0, 255, 255, 0.5));
+    margin: 0 auto;
+}
