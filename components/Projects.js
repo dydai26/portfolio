@@ -59,6 +59,13 @@ function Projects() {
                 link: "https://dydai26.github.io/AirPods/"
             },
             {
+                title: "landing page",
+                description: "landing page for commodity business",
+                image: "./img/L6.png",
+                tags: ["Html", "CSS","JS"],
+                link: "https://dydai26.github.io/EARBUDS-BASIC-2//"
+            },
+            {
                 title: "Shop",
                 description: "Website business card for a confectionery manufacturer",
                 image: "./img/shop.png",
